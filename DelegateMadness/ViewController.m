@@ -40,8 +40,7 @@
 {
         
     NSString *colorMethodName = [[colorName lowercaseString] stringByAppendingString:@"Color"];
-    SEL colorNameSelector = NSSelectorFromString(colorMethodName);
-    self.view.backgroundColor = [UIColor performSelector:colorNameSelector];
+    self.view.backgroundColor = [UIColor performSelector:NSSelectorFromString(colorMethodName)];
 
 }
 
